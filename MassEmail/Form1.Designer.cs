@@ -125,6 +125,7 @@
             this.textBoxSmtp.Name = "textBoxSmtp";
             this.textBoxSmtp.Size = new System.Drawing.Size(184, 20);
             this.textBoxSmtp.TabIndex = 0;
+            this.textBoxSmtp.Text = "smtp.gmail.com";
             // 
             // label1
             // 
@@ -168,6 +169,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(184, 20);
             this.textBoxLogin.TabIndex = 5;
+            this.textBoxLogin.Leave += new System.EventHandler(this.textBoxLogin_Leave);
             // 
             // maskedTextBoxPassword
             // 

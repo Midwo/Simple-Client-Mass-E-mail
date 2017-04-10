@@ -50,7 +50,7 @@ namespace MassEmail
             }
             else
             {
-                MessageBox.Show("Wiadomość wysłana");
+                MessageBox.Show("Wiadomość wysłana", "Komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -144,6 +144,11 @@ namespace MassEmail
             {
                 MessageBox.Show("Błąd: " + ex.Message);
             }
+        }
+
+        private void textBoxLogin_Leave(object sender, EventArgs e)
+        {
+            textBoxNadawca.Text = textBoxLogin.Text;
         }
     }
 }
