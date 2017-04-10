@@ -16,5 +16,22 @@ namespace MassEmail
         {
             InitializeComponent();
         }
+
+        private void buttonDodajAdres_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var eMailValidator = new System.Net.Mail.MailAddress(textBoxAdres.Text);
+                listBoxAdresy.Items.Add(textBoxAdres.Text);
+                textBoxAdres.Clear();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message, "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // MessageBox.Show("Wprowdz poprawny adres e-mail", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
+
+        }
     }
 }
